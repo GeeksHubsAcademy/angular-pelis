@@ -10,6 +10,9 @@ export class MovieService {
   constructor(private httpClient:HttpClient) { }
 
   getDiscoverMovies():Observable<object>{
-    return this.httpClient.get(this.apiUrl+'discover/movie?api_key='+this.apiKey)
+    return this.httpClient.get(this.apiUrl+'discover/movie?api_key='+this.apiKey+'&language=es-ES')
+  }
+  getMoviesByCategory(category:string):Observable<object>{
+    return this.httpClient.get(`${this.apiUrl}movie/${category}?api_key=${this.apiKey}&language=es-ES`)
   }
 }

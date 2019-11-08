@@ -1,10 +1,12 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 import { MovieListComponent } from './components/movie-list/movie-list.component';
+import { MovieCategoriesComponent } from './components/movie-categories/movie-categories.component';
 
 
 const routes: Routes = [
-  {path:"",component:MovieListComponent}
+  {path:"",component:MovieListComponent},
+  {path:"movies/:category",component:MovieCategoriesComponent}
 ];
 
 @NgModule({
