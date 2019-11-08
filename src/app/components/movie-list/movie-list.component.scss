@@ -1,6 +1,7 @@
 .movies{
     display: grid;
     grid-template-columns:  repeat(4,1fr);
+    color: black;
     .movie{
         background-color: rgb(243, 243, 243);
         display: flex;
